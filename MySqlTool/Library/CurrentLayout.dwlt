@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 421}
+  m_MinSize: {x: 950, y: 442}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 791
-  m_MinSize: {x: 950, y: 421}
+  m_MinSize: {x: 950, y: 442}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -105,10 +105,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 741
-  m_MinSize: {x: 709, y: 371}
-  m_MaxSize: {x: 18004, y: 14021}
+  m_MinSize: {x: 707, y: 392}
+  m_MaxSize: {x: 18002, y: 14042}
   vertical: 1
-  controlID: 7868
+  controlID: 97
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 741
-  m_MinSize: {x: 709, y: 371}
-  m_MaxSize: {x: 18004, y: 14021}
+  m_MinSize: {x: 707, y: 392}
+  m_MaxSize: {x: 18002, y: 14042}
   vertical: 0
-  controlID: 7869
+  controlID: 98
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 990
     height: 741
-  m_MinSize: {x: 232, y: 371}
-  m_MaxSize: {x: 10002, y: 14021}
+  m_MinSize: {x: 232, y: 392}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 7947
+  controlID: 11
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 990
     height: 464
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 0
     width: 331
     height: 741
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -453,30 +453,30 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Plugins
   m_ViewMode: 1
   m_StartGridSize: 93
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Plugins
   m_LastFoldersGridSize: 93
-  m_LastProjectPath: H:\SimpleMysqlTool-master\MySqlTool
+  m_LastProjectPath: "H:\\Unity3D\\Unity\u9879\u76EE\\SimpleMysqlTool\\MySqlTool"
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 402f0000
-    m_LastClickedID: 12096
-    m_ExpandedIDs: 00000000842700009c270000ca290000f23f000000ca9a3bffffff7f
+    m_SelectedIDs: cc270000
+    m_LastClickedID: 10188
+    m_ExpandedIDs: 00000000ae270000d2270000162800003a2a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: Plugins
+      m_OriginalName: Plugins
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10164
+      m_UserData: 10188
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000842700009c270000ca290000f23f000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000ae270000d2270000162800003a2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -604,9 +604,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e280000
-    m_LastClickedID: 10302
-    m_ExpandedIDs: 7691faff4e2cfbff7ce3fbff3ce6fcff42e6fcff5ae6fcff60e6fcff66e6fcff6ce6fcfff864fdff16ecfdffd20bffff98fbffff000000004828000064280000b6280000c2280000cc280000fc28000002290000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 8cfbffff000000001c2900005c290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -6,6 +6,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
+//注册按钮
 public class RegisterBtn : MonoBehaviour
 {
 
@@ -57,6 +58,7 @@ public class RegisterBtn : MonoBehaviour
             byte[] str02 = sha1.ComputeHash(str01);
             var pass = BitConverter.ToString(str02).Replace("-", "");
             string values = string.Format("'{0}','{1}','{1}'", account.textComponent.text, pass);
+            SqlHelper.Insatance.SetDB("GameDBArea");
             SqlHelper.Insatance.Insert("account", values, "(UserName,PassWord,SecPsw)");
             Tips.Instance.OnSuccess("注册成功");
         }

@@ -15,7 +15,7 @@ public class Tips : MonoBehaviour {
         info = transform.Find("Info").GetComponent<Text>();
         confirm = transform.Find("confirm").GetComponent<Button>();
         confirm.onClick.AddListener(() => { gameObject.SetActive(false); });
-        gameObject.SetActive(false);
+        info.text = "请先设置数据库";
 	}
 	
     public void OnException(Exception e)

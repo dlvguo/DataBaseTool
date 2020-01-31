@@ -38,6 +38,7 @@ public class Ribbon : MonoBehaviour
             return inputField;
         }
     }
+    public GameObject ListContainer;
 
 
     public static Ribbon Instance
@@ -59,17 +60,14 @@ public class Ribbon : MonoBehaviour
     //清空
     public void ClearRibbon()
     {
+        ListContainer.SetActive(false);
 
         int childCount = this.GetComponent<RectTransform>().childCount;
-        for (int i = 1; i < childCount; i++)
+        for (int i = 2; i < childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);
         }
 
     }
 
-    public void CreatPrefab(PrefabType type, Vector3 pos, string Info)
-    {
-
-    }
 }

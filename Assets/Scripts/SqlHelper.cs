@@ -16,11 +16,22 @@ public class SqlHelper
     //private static string connStr="Database=Lwcc;Data Source = 172.22.224.87; User Id = root; Password=123456;port=3306";
     //SqlServer方法
     private static string connStr = "server=106.15.121.111;database=GameDB;uid=sa;pwd=a2241939438...";
-
     private string ip;
     private string acc;
     private string psd;
     private string db;
+
+    //用于切割用的Sql分隔符
+    private const string _spiltStr = "/-/";
+    public string SpiltStr
+    {
+        get
+        {
+            return _spiltStr;
+        }
+    }
+
+
     public static SqlHelper Insatance
     {
         get
@@ -28,8 +39,6 @@ public class SqlHelper
             return _instance;
         }
     }
-    
-
 
     /// <summary>
     /// 获取连接
@@ -46,9 +55,9 @@ public class SqlHelper
     /// 获取所有表名
     /// </summary>
     /// <returns></returns>
-    public IEnumerable<string> GetTables()
+    public IEnumerable<string> GetTables(string sql)
     {
-        string sql = string.Format(@"Select Name FROM SysObjects Where XType='U' orDER BY Name;", db);
+        //string sql = string.Format(@"Select Name FROM SysObjects Where XType='U' orDER BY Name;", db);
         //string sql = @"select table_name from information_schema.tables where table_schema='lwcc' and table_type='base table'";
         List<string> strs = new List<string>();
         var conn = GetSqlConn();
@@ -57,11 +66,20 @@ public class SqlHelper
         SqlDataReader reader = cmd.ExecuteReader();
         while (reader.Read())
         {
-            strs.Add(reader[0].ToString());
+            string str = "";
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                if (i != 0)
+                    str += SpiltStr;
+                str += reader[i].ToString();
+            }
+            strs.Add(str);
         }
         conn.Close();
         return strs;
     }
+
+
 
     /// <summary>
     /// 设置连接Str
@@ -121,9 +139,9 @@ public class SqlHelper
     /// </summary>
     /// <param name="tableName"></param>
     /// <param name="values"></param>
-    public void Insert(string tableName, string values,string vars="")
+    public void Insert(string tableName, string values, string vars = "")
     {
-        string sql = string.Format("INSERT INTO {0} {1} VALUES ({2});", tableName,vars, values);
+        string sql = string.Format("INSERT INTO {0} {1} VALUES ({2});", tableName, vars, values);
         var conn = GetSqlConn();
         conn.Open();
         SqlCommand cmd = new SqlCommand(sql, conn);
@@ -132,8 +150,19 @@ public class SqlHelper
     }
 
     //更新
-    public void Update()
+    public void Update(string table, string setstr, string limit)
     {
+        //UPDATE Person SET FirstName = 'Fred' WHERE LastName = 'Wilson' 
+        string sql = string.Format("UPDATE {0} SET {1} WHERE {2};", table, setstr, limit);
+        var conn = GetSqlConn();
+        conn.Open();
+        SqlCommand cmd = new SqlCommand(sql, conn);
+        cmd.ExecuteNonQuery();
+        conn.Close();
+    }
 
+    public void SetDB(string db)
+    {
+        SetConnStr(ip, acc, psd, db);
     }
 }

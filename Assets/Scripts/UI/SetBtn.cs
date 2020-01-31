@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//设置按钮
 public class SetBtn : MonoBehaviour
 {
     //设置按钮
@@ -12,13 +13,11 @@ public class SetBtn : MonoBehaviour
     private InputField ip;
     private InputField acc;
     private InputField psd;
-    private Dropdown dbs;
     private string _ip;
     private string _acc;
     private string _psd;
     private string _db;
-    public GameObject Table;
-    private Dictionary<string, Table> dicTables;
+
     // Use this for initialization
     void Start()
     {
@@ -37,20 +36,11 @@ public class SetBtn : MonoBehaviour
         psd.onEndEdit.AddListener((value) =>
         {
             OnValueChanged(2, value);
-        });
-
-
-        dbs = GameObject.Find("DBs").GetComponent<Dropdown>();
-        dbs.onValueChanged.AddListener((value) =>
-        {
-            OnValueChanged(3, value.ToString());
-
-        });
+        });        
         setBtn.onClick.AddListener(OnSet);
         _ip = ip.text;
         _acc = acc.text;
         _psd = psd.text;
-        _db = "GameDBArea";
         SqlHelper.Insatance.SetConnStr(_ip, _acc, _psd, _db);
 
     }
